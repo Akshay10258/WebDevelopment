@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media query</title>
+    <style>
+        /* SYNTAX : 
+        To make the page "Responsive" --> to screen size usually
+        @media not/only mediatype and(expressions){
+            css code;
+            mediatype - screen,speech,all,print
+            }*/
+        body{
+            background-color: aqua;
+        }
+        .boxes{
+            display: flex;
+        }
+        .box{
+            background-color: antiquewhite;
+            height: 120px;
+            width:200px;
+            padding: 10px;
+            border: 2px solid black;
+            margin: 5px;
+        }
+
+        @media only screen and (max-width:330px)
+        {
+            body{
+                background-color: violet;
+            }
+
+            .boxes{
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div>
+        I am a box
+    </div>
+    <div class="boxes">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
+</body>
+</html>

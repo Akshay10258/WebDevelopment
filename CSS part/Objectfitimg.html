@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object-Fit</title>
+    <style>
+        .container{
+            height: 400px;
+            width: 500px;
+            border: 2px solid black;
+
+            /* inserting image as background image */
+            background-image: url("https://images.unsplash.com/photo-1575936123452-b67c3203c357?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+            background-position: center center;
+
+            /* if to small make background : no repeat */
+            
+        }
+        img{
+            height: 400px;
+            width: 500px;
+            /* just setting h and w This disturbs the aspect ratio of the img i.e XPix * YPix=aspect ratio ==>determines the clarity  */
+            
+            /* 1.cover : the image is set so that the aspect ratio remains the same but removes some part of the img to do so */
+            /* object-fit: cover;
+            /* object-position: top right; */  /*cuts the remaining part of the portion to maintain*/
+            
+            /* 2.contain : image gets fitted in the container with the same aspect ratio but scales down the image to fit it */
+            object-fit: contain;
+
+            /* Object-position can even be in pixels : top&bottom right&left */
+            /* By default 3.fill : take the given height and width */
+            /* object-fit: fill; */
+
+            /* filters : opacity , brightness ... */
+            /* filter: brightness(10); */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- <img src="object fit.jpg"> -->
+    </div>
+</body>
+</html>

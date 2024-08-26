@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>transitions</title>
+    <style>
+        .container{
+            border: 2px solid black;
+            height: 80vh;
+            width: 80vw;
+            margin: 20px;
+            /* padding: 50px; */
+        }
+        .box{
+            background-color: brown;
+            color: white;
+            font-size: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100px;
+            width: 100px;
+
+
+            /* transition-property: transform;
+            transition-duration: 3s;
+            transition-timing-function: ease-in;
+            transition-delay: 1s; */
+            /* any order but 4 properties : P Du Fn De */
+            transition: transform ease-in-out 0.5s 1s ;
+            /* For short hand : delay at the last */
+        }   
+
+
+        .trans:hover{
+            /* background-color: aqua */
+            transform: translateX(200px) translateY(200px) scale(2);
+            background-color: blanchedalmond;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box trans"></div>
+    </div>
+</body>
+</html>

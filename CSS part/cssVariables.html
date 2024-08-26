@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Css Variables</title>
+    <style>
+        /* To declare the global variables */
+        :root{
+            --divbg: rgb(156, 169, 245);
+            --divcolor:blue;
+            --pad: 23px;
+            --licolor: orange;
+        }
+        
+        .lorem{
+            color: var(--divcolor);
+            background-color: var(--divbg);
+        }
+
+        .list{
+            --licolor:rgb(146, 58, 58);  /* Becomes the local variable*/
+            color: var(--licolor,green); /* if the variable --licolor is not found then the other value next to comma is taken */
+            padding: var(--pad);
+        }
+        *{
+            padding: 0;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="lorem"> 
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione voluptates cupiditate eveniet, eum animi voluptatem reiciendis id atque distinctio sequi!
+    </div>
+    <div class="list">
+        <ul>
+            <li>Home</li>
+            <li>About</li>
+            <li>Info</li>
+        </ul>
+    </div>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms In HTML</title>
+    <link rel="stylesheet" href="css for inline and block.css">
+</head>
+<body>
+    <center><h1>Demo Form</h1></center>
+    <form action="post" method="get">   <!-- POST helps to send large data to the server-->
+        <div> <!--block element -->
+        <label for="USERNAME">USERNAME : </label>   <!-- "for" specifies which "form element" the "label" is bound to -->
+        <input type="text" id="USERNAME" name="Username" placeholder="Enter your Username" required> <!-- required specifies the mandatory field -->
+        </div>  <!-- the name under name tag can be reused -->
+        <div>
+
+            <!-- checked : the deafault that need to be selected  -->
+            <!-- value : when the names are same the elements can be differentiated using "value" -->
+        <input type="radio" id="male" name="Gender" value="male" >
+        <label for="male">MALE</label>
+        <input type="radio" id="female" name="Gender" value="female" checked>
+        <label for="female">FEMALE</label>
+        </div>
+        <div>
+            <input type="checkbox" id="status" name="Status" checked>
+            <label for="status">Form is filled</label>
+        </div>
+        <div>
+            <label for="add">Address</label>
+            <textarea name="comment" rows="10" cols="50">Enter comments(this is text area)</textarea>
+        </div>
+        <div>
+            <select name="Age">
+                <option value="18">Age : 18</option>
+                <option value="19">Age : 19</option>
+                <option value="20">Age : 20</option>
+            </select>
+
+            <!-- multiple size="2" : to select multiple options -->
+            <select name="Age" multiple size="2">
+                <option value="18">Age : 18</option>
+                <option value="19">Age : 19</option>
+                <option value="20">Age : 20</option>
+            </select>
+        </div>
+        <input type="button" value="kjdhsk">
+
+        <!-- Inline and block elements : -->
+        <!-- Inline element: They occupy only the required amount of space
+        Block elemnt : They occupy the entire Line -->
+
+        <a href="My Bookamarks.html">Open Bookamark page(I am an INLINE elem)</a> <!-- Inline elem-->
+        <span>I am span and i am an INLINE elem</span>
+        <p>Hello I am div and i am a "BLOCK elem"</p>
+        <button>Submit</button><br><br>
+
+        Email :<input type="email" name="email" placeholder="abc@gmail.com">
+        <br><br>
+        <input type="url" name="url">
+        <br><br>
+        <input type="number" min="100" max="200">
+        <br><br>
+        <!-- title : to display the default address -->
+        <input type="range"><br><br>
+        <input type="date" title="enter valid date"><br><br>
+        <input type="month"><br><br>
+        <input type="week"><br><br>
+        <input type="datetime-local"><br><br>
+        <input type="search"><br><br>
+        <input type="color"><br><br>
+
+        <fieldset>
+            <legend>hdsjsddshfj</legend>
+        </fieldset>
+        <!-- rgb varies from 0 to 255 -->
+        <!-- name attribute helps to access data of an element in the http request -->
+    </form>
+    
+</body>
+</html>

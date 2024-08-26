@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grids</title>
+    <style>
+        /* Grid track : any area between "any two" grid lines */
+        /* Grid area : any area enclosed by the grid lines  */
+        
+        .container{
+            border: 2px solid black;
+            display: grid;
+            /* Names can be given to the columns */
+            grid-template-columns: [first line]130px [sec column]200px;
+            /* Other ways :*/
+            /* 1.Dividing into fractions by using the unit fr  */
+            /* grid-template-columns: 1fr 2fr 1fr; */
+            
+            /* 2.using repeat : grid-template-columns:repeat(4,100px) */
+            /* minmax(minwidth,maxwidth); */
+        }
+
+        /* using grid area */
+        /* .container{ 
+            border: 2px solid black;
+            display: grid;
+            grid-template-areas: "nav nav nav"
+                                "side main main"
+                                "footer footer footer";
+        }
+        
+        .item-1{
+                grid-area: nav;
+            }
+
+        .item-2{
+                grid-area: side;
+            }
+
+        .item-3{
+                grid-area: main;
+            } */
+        .box{
+            border: 2px solid green;
+            height: 20px;
+            width: 20px;
+        }
+
+        .item-4{
+            /* To set the limits of a particular item in the grid  */
+            grid-column: 1/2; /* Coulmn 1 to 2  */ */
+            grid-row: 1/2; /* row 1 to 2 */
+        }
+
+        /* note : gap,justfy and align can be used even here */
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+        <div class="box item-4">4</div>
+        <div class="box">5</div>
+        <div class="box">6</div>
+        <div class="box">7</div>
+    </div>
+</body>
+</html>

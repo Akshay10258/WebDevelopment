@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>shadow and outlines</title>
+    <style>
+        div{
+            border: 5px solid green;
+            box-shadow: 20px 15px 5px rgb(74, 167, 74);
+            text-shadow: 10px 20px 3px;
+        }
+        p{
+            text-shadow: 1px 1px 3px yellow;
+            outline: 2px solid;  /*Doesnt affect the box model of p,just a outline can be varied to any size */
+        }
+
+    </style>
+</head>
+<body>
+    <div>
+        i am a box
+    </div>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, repellendus!
+    </p>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .boxes *{
+            color: burlywood;
+        }
+
+        /* Attribute selector */
+        [data-padd="one"]
+        {
+            border: 3px solid black;
+            padding-top: 10px;
+        }
+        /* To select all */
+        /* .box,[data-padd="one"]
+        {
+            border: 3px solid black;
+            padding-top: 10px;
+        } */
+
+        /* Pseudo selctors */
+        .box:nth-child(odd){
+            background-color: aqua;
+        }
+        /* Other pseudos : nth-last-child -->counts from the last */
+
+        /* TMP :Pseudo elements : before and after : Dynamically inserting content through css */
+        .boxes::before
+        {
+            content: "I am dynamically inserted using css" ;
+        }
+
+        input::placeholder{
+            color: brown;
+            font-size:15px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="boxes">
+        <div data-padd="one" class="box">I am box one</div>
+        <div class="box">I am box two</div>
+        <div class="box">I am box three</div>
+        <input placeholder="Enter your name here"> 
+    </div>
+
+</body>
+</html>

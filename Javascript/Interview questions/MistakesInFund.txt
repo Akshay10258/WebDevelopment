@@ -1,0 +1,43 @@
+for loop
+
+for(let i=start;condition;incr/decr)
+
+condition shd always return true or false but "==" cant be used;
+
+reverse()==> available only for arrays of strings
+
+join()==>joins the elements of the array into a string ;
+join('')==>to join without the commas
+
+Ascii of characters :
+total alphabets 26
+uppercase : in the range 65 to 90
+
+lowercase : 97 to 122
+
+digits(0 to 9) : 48 to 57
+
+for searching and filtering in multiple objects : put them directly into an empty array as objects itself do not convert them to array by using "Object.entries()" as the indexing is required which makes it more complex and less readable
+
+==>anything under {} as key value pairs is an object
+
+in css rem :
+if u have set the width of the parent then agin setting the widthof the child will disturb responsiveness
+
+
+media query should always be at last of css file else the normal css overides
+
+******IMPORTANT******* 
+(fn call along with await almost never returns a promise)
+await expression "returns the resolved value" of the Promise
+In case of calling an aync fn using await ,even then the "value that is returned" is wt we get not the promise
+
+making async fn for awaits and calling that fn as await shd be the first member is fulishness 
+instead use multiple awaits
+
+HOISTING :
+whenever a variable is declared using "var" --> the declaration is moved to the top and is "by default initialised to undefined";
+such that the value is could be used though the declaration is done at last
+
+//IMPORTANT :
+Note : even let and const get hoisted but they are not initialised to any value thus accessing before its declaration it returns a reference error

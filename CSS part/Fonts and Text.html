@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=M+PLUS+1+Code:wght@100..700&display=swap');
+    
+        /* for the para part */
+    .default{
+        font-family:Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 20px;
+        font-weight: 600;
+        font-style: italic;
+        text-align: center;
+        text-decoration:underline;
+    }
+    
+    .googlefont{
+        font-family: "M PLUS 1 Code", monospace;
+        font-weight:600;
+        line-height: 35px;
+
+    }
+    .letterspace{
+        letter-spacing: 10px;
+        text-transform: capitalize; /* uppercase and lowercase */
+    }
+    div p{
+        text-decoration: dotted;
+        text-overflow: ellipsis;
+
+    }
+    #overflow{
+        background-color: aqua;
+        text-align: center;
+        border: 2px solid rgb(58, 40, 40);
+        width: 80px;
+        text-overflow:ellipsis;
+        overflow:scroll;
+    }
+    </style>
+</head>
+<body>
+    <p class="default">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi totam numquam quo odit officiis architecto nihil repellendus in, iure rerum.
+    </p>
+
+    <p class="googlefont">
+    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quam assumenda commodi totam velit ipsum, ut reprehenderit modi molestias fuga qui voluptatem facere deleniti.  
+    </p>
+
+    <div class="letterspace">
+    hello alllll
+        
+    </div>
+    <h2 id="overflow">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, nisi!
+    </h2>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Bubbling</title>
+    <style>
+        .container{
+            background-color: aqua;
+            margin: 10px;
+            padding: 10px;
+        }
+        .innerchild{
+            background-color:chartreuse;
+            margin: 10px;
+            padding: 10px;
+        }
+        .innermostchild{
+            background-color: yellow;
+            margin: 10px;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="innerchild">
+            <div class="innermostchild">I am innermost child</div>
+        </div>
+    </div>
+    <script>
+        // Event Bubbling : when the innermost child is listened  then even all its ancestrol parents gets called ,by default
+        // To stop this : we stop the propogation
+        document.querySelector(".innermostchild").addEventListener("click",(e)=>{
+            e.stopPropagation();
+            alert("You clicked the innermost child");
+        })
+
+        document.querySelector(".innerchild").addEventListener("click",()=>{
+            alert("You clicked the inner child");
+        })
+
+        document.querySelector(".container").addEventListener("click",()=>{
+            alert("You clicked the container");
+        })
+        
+        function getrandomcolor(){
+        rgb1=Math.floor(Math.random()*200);
+        rgb2=Math.floor(Math.random()*200);
+        rgb3=Math.floor(Math.random()*200);
+        return `rgb(${rgb1},${rgb2},${rgb3})`
+        }     
+        
+        // Set interval : to set a time interval for a operation to be performed continously
+        // Synatx : setInterval(function,time in ms);
+        let ans=setInterval(()=>{
+            document.querySelector(".innerchild").style.backgroundColor=getrandomcolor();
+        },500);
+
+        console.log(ans); //returns the value as 1
+        // clearInterval(1);
+
+        // set timeout : to set a time interval for an opertion to be performed only once .
+        // Takes two arguments : 1.a function to be executed after the delay 2.the delay time in ms
+        setTimeout(()=>{
+            document.querySelector(".container").style.backgroundColor=getrandomcolor()
+        },6000)
+        // clearTimeout(1);
+        </script>
+
+</body>
+</html>

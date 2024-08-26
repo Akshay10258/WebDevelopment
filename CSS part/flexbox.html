@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexboxes</title>
+    <style>
+        .container{
+            border: 2px solid black;
+            display: flex;
+            height: 500px;
+            /* Now the following feautures can be used align the items */
+            justify-content: center;
+            /* Justify-content - aligns the content wrt main axis --> Horz for row-alignment and vertical for column alignment*/
+            /* The other axis is called the cross axis */
+            
+            /* align-items: if items are present on a single line the to align it */
+            align-items: center;
+
+            /* flex-wrap : if there the content overfliws out of the containers due to large no of boxes */
+            flex-wrap: wrap;
+
+            /* align-content : Used to align the itemas as whole content if there are multiple lines */
+            /* align-content: center; */
+
+            /* flex-flow : to give both flex direction , wrap at once */
+            flex-flow: row wrap;
+
+            /* gap - To give spacing between the items of the flex box */
+            gap: 10px 20px; /* row-gap column-gap */
+        }
+
+        .box{
+            background-color: chartreuse;
+            height: 90px;
+            width: 90px;
+            border: 2px solid black;
+            margin: 10px;
+            /* item properties of flex */
+            /* 
+            1.order - higher the order of the item ,the later it gets placed than other items
+            (By default the order of all items is zero)
+
+            2.flex-grow : makes the item grow along the main axis by "n times"
+            
+            3.flex-shrink : to shrink the item when necessary , i.e- when the screen size is reduced that elemt gets shrinked upto "n times the original size" 
+            
+            4.align-self : to align a single element in the container
+            */
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div> 
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
+
+</body>
+</html>

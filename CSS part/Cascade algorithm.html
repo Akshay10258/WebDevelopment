@@ -1,0 +1,56 @@
+<!-- If specificity is same : to determine which gets appied if multiple selectors are present for the same tag
+    1.The last one in code gets preference
+    2.Order : Important(10000) > Inline Style(1000) > ID Selector(100) > Class or Attribute Selector(10) > Element Selector(1) > Universal Selector(0) 
+    thus using selectors with lesser spc is prefered
+    3.Multiple selectors used together then add total and compare
+    4.
+    -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* The specificity of this selector is 1  */
+        h1{
+            color: aqua;
+        }
+        /* color: red !important; has the highest specificity */
+        
+        /* The specificity of this selector is 10  */
+        .cpurple {
+            color: purple;
+        }
+
+        /* The specificity of this selector is 1 + 10 = 11  */
+        h1.yellow {
+            color: yellow;
+        }
+
+        /* This is an example of attribute selector. The specificity of this selector is 10 */
+        [data-x=a] {
+            color: maroon;
+        }
+
+        /* The specificity of this selector is 10  */
+        .cred {
+            color: red;
+        }
+        /* Example :*/
+        /* The specificity of this selector is 1 + 10 + 10 + 10 + 10 = 41  */
+        a.harryclass.rohan-class[href]:hover {
+            color: rgb(45, 233, 45);
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <h1 class="cred yellow cpurple" data-x="a">CSS Specificity</h1>
+    </div>
+    <a href="https://www.codewithharry.com/tutorial/css-specificity/" target="_blank">Open  blog page for specificivity</a>
+</body>
+
+</html>

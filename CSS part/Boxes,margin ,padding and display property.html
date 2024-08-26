@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Boxmodel</title>
+    <style>
+        /* Should at the start */
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .box {
+            background-color: aqua;
+        }
+
+        .box1 {
+            color: yellow;
+            padding: 15px;
+            margin: 30px;
+            border: 5px solid blue;
+            height: 100px;
+            box-sizing: border-box;
+            /* Makes the ,size of the box(with zero padding) + size of 2 sides padding = height mentioned  */
+            
+        }   
+
+        .box2 {
+            color: rgb(255, 255, 255);
+            padding: 15px;
+            margin: 40px;
+            border: 5px solid rgb(0, 133, 44);
+            height: 100px;
+            box-sizing: border-box;
+        }
+
+        /* Margin Collapse - when two boxes are adj the max margin is apllied as common to both */
+
+        /* for the para part */
+
+        div {
+            letter-spacing: 10px;
+            text-transform:capitalize;
+            /* uppercase and lowercase */
+        }
+
+        .box4 {
+            border: 5px solid red;
+            /* Display property */
+            display: inline-block;
+            /* display:flex;  
+            justify-content: center; to align the text*/
+            padding: 30px;
+            margin: 40px;
+            width: 200px;
+        }
+
+        .box3{
+            border: 5px solid ;
+            /* display: none;  makes the entire box disappear */
+            visibility:hidden;  /* reserves the space */
+        }
+    </style>
+</head>
+
+<body>
+    <!-- ALL ARE BOXES -->
+    <div class="box box1">I am a box</div>
+    <div class="box box2">I am another box</div>
+    <!-- A block element -->
+    <p class="box3">Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore, accusamus.</p>
+    <p class="box4">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vel earum veniam minus numquam accusantium excepturi,
+        minima ut exercitationem ratione nesciunt.</p>
+    
+</body>
+
+</html>

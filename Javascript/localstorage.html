@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //local storage : to store some var and data onto our local storage "as key-value pairs"so that it is not lost even after we refresh the page (unless the website is closed and opened again)
+        //Note : """It can only store strings"""
+        //can be seen under application
+        if(localStorage.getItem("entry")){ //getItem()=> to get the element that is stored 
+            name=localStorage.getItem("entry")
+            document.write("Welcome back "+name);
+        }   
+        else{
+            let name=prompt("Enter name : ");
+            //setItem()=> storing the element to localstorage
+            localStorage.setItem("entry",name)
+            document.write("Hello ",name)
+        }
+
+        // suppose we need to store an object
+
+        let obj={
+            name:"akshay",
+            course:"Btech",
+            branch:"Computer Science"
+        }
+
+        // Since only strings can be stored 
+        strofObj=JSON.stringify(obj);
+
+        localStorage.setItem("myobj",strofObj);
+
+        localStorage.getItem("myobj");
+
+        //To convert back to object
+        console.log(JSON.parse(strofObj))
+    </script>
+</body>
+</html>

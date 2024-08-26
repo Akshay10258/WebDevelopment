@@ -1,0 +1,10 @@
+SEO(SEARCH ENGINE OPTIMIZATION) : The way a browser (search engine) prefers one website over the other --- the one loads faster and has better CWV
+
+CORE WEB VITALS IN HTML : THEY ARE THE PARAMETERS THAT TELL ABOUT THE EFFICIENCY OF THE WEBSITE:
+
+1.CLS (Cumulative Layout Shift) : The shift in the elements of the page as the page gets loaded.
+
+2.LCP (Largest Contentful Paint) : The time taken to load the most vital or the largest part of the webpage.(<2.5s --- good)
+
+3.FID (First Input Delay) : The delay in the response after a input detected on page.
+

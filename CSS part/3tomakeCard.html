@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=M+PLUS+1+Code:wght@100..700&display=swap')
+
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .parent{
+            height: 100vh;
+            width: 40vw;
+            background-color: rgb(202, 214, 211);
+            position: absolute;
+        }
+        .box1{
+            position: relative;
+            height: 90vh;
+            width: 33vw;
+            background-color: whitesmoke;
+            border: 3px solid rgb(188, 204, 199);
+            left: 46px;
+            top: 30px;
+            border-radius: 20px;
+        }
+        img{
+            border-radius: 10%;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            position: relative;
+            top: 10px;
+        }
+        .one{
+            position: relative;
+            padding: 2px;
+            padding-left: 10px;
+            padding-right: 10px;
+            display:inline-block;
+            /* width: 50px; */
+            /* text-align: center; */
+            border: 1.5px solid rgb(100, 94, 94) ;
+            border-radius: 15px;
+            margin-left:20px;
+            opacity: 50%;
+            top: 40px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        .gfont{
+        font-family: "M PLUS 1 Code", monospace;
+        font-weight:600;
+        position: relative;
+        width: 438px;
+        left: 8px;
+        top: 40px;
+        }
+        .opacity{
+            opacity: 40%;
+            margin: 0px;
+            font-size: large;
+            line-height: 25px;
+        }
+
+        .read{
+            border-radius: 25px;
+            background-color: rgb(199, 231, 241);
+            padding: 15px;
+            padding-left: 30px;
+            padding-right: 30px;
+            position: relative;
+            left: 11vw;
+            top: 70px;
+            color:rgb(45, 91, 107);
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            text-shadow: 2px 2px 5px rgb(99, 195, 224);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="parent">
+        <div class="box1">
+            <img src="ex3img.jpeg" width="430px" height=250 class="center">
+            <span class="one">Nature</span>
+            <span class="one">Lake</span>
+            <h1 class="gfont">Lago De Brias</h1>
+            <p  class="gfont opacity">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Porro expedita atque rerum sapiente suscipit tempore exercitationem rem, vitae eveniet excepturi? </p>
+            <span class="read">Read More</span>
+        </div>
+    </div>
+</body>
+
+</html>
